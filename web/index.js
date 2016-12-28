@@ -9,20 +9,21 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
+const sockets = new Set();
+
+app.get('/start', function (req, res) {
+    sockets.forEach((socket) => socket.emit('message', 'start now'));
+    res.end();
+})
+
 app.use('/node_modules', express.static('node_modules'));
 
 io.on('connection', function (socket) {
     console.log('a user connected');
-    function emit() {
-        if (socket.connected) {
-            socket.emit('message', 'start');
-            console.log('message sent');
-            setTimeout(emit, 2000);
-        }
-    }
-    emit();
+    sockets.add(socket);
     socket.on('disconnect', function () {
         console.log('user disconnected');
+        sockets.delete(socket);
     });
 });
 
