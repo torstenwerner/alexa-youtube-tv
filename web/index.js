@@ -5,10 +5,6 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
-app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/index.html');
-});
-
 const sockets = new Set();
 
 app.get('/start', function (req, res) {
@@ -17,6 +13,7 @@ app.get('/start', function (req, res) {
 })
 
 app.use('/node_modules', express.static('node_modules'));
+app.use('/', express.static('ui'));
 
 io.on('connection', function (socket) {
     console.log('a user connected');
