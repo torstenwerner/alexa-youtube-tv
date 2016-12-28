@@ -8,6 +8,7 @@ const io = require('socket.io')(http);
 const sockets = new Set();
 
 app.get('/start', function (req, res) {
+    console.log('start triggered');
     sockets.forEach((socket) => socket.emit('message', 'start now'));
     res.end();
 })

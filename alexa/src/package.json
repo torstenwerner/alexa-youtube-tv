@@ -1,0 +1,18 @@
+{
+  "name": "youtube-tv-alexa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -f /tmp/alexa.zip; zip -r /tmp/alexa.zip *.js node_modules/alexa-sdk node_modules/i18next* node_modules/lodash node_modules/node-fetch node_modules/encoding node_modules/iconv-lite node_modules/is-stream",
+    "upload": "aws lambda update-function-code --region eu-west-1 --function-name YoutubeTV --zip-file fileb:///tmp/alexa.zip",
+    "deploy": "npm run build && npm run upload",
+    "test": "mocha"
+  },
+  "author": "Torsten Werner",
+  "license": "Unlicense",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6",
+    "node-fetch": "^1.6.3"
+  }
+}
