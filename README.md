@@ -3,6 +3,10 @@
 Can control the Youtube player on your desktop by speaking to Amazon Alexa (Echo).
 Status: very early stage of development.
 
+## Vision
+
+The idea of this project is to combine Web applications with Speech recognition and synthesis.
+
 ## Architecture
 
 The web application in folder web is using nodejs and expressjs to implement the backend.
