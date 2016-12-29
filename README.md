@@ -30,6 +30,7 @@ The following instructions explain the setup of the web app.
 You can run the web application locally:
 
 - cd web
+- npm install
 - npm start
 
 Navigate to http://localhost:3000 and check that a youtube video load but does not start automatically.
