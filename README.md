@@ -23,6 +23,8 @@ Use 'Youtube TV' as the invocation name.
 The details are explained elsewhere e.g. https://developer.amazon.com/alexa-skills-kit#get-started-now .
 Please use the instructions there.
 
+The following instructions explain the setup of the web app.
+
 ### Local Deployment
 
 You can run the web application locally:
