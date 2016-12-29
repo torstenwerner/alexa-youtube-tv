@@ -24,9 +24,12 @@ You can run the web application locally:
 - cd web
 - npm start
 
-Navigate to http://localhost:3000 and execute a GET request against http://localhost:3000/start with any http client.
-That will trigger playing the video in browser for 8 seconds.
-You can repeat the $YOUTUBE_TV_BASE_URL/start step if you want.
+Navigate to http://localhost:3000 and check that a youtube video load but does not start automatically.
+Execute a GET request against http://localhost:3000/start with any http client - either browser or anything else.
+This will trigger playing the video in browser for 8 seconds.
+You can repeat the $YOUTUBE_TV_BASE_URL/start step as long as you want.
+
+But the Alexa voice service cannot talk to your local webapp.
 You may use ngrok from https://ngrok.com/ to tunnel the local web app into the internet:
 
 - cd web
