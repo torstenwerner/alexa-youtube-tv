@@ -22,7 +22,7 @@ The Alexa custom skill in folder alexa calls a simple REST service of the node b
 You can run the web application locally:
 
 - cd web
-- npm run
+- npm start
 
 Navigate to http://localhost:3000 and execute a GET request against http://localhost:3000/start with any http client.
 That will trigger playing the video in browser for 8 seconds.
