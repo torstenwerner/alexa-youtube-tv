@@ -17,6 +17,12 @@ The Alexa custom skill in folder alexa calls a simple REST service of the node b
 
 ## Deployment and Testing
 
+The Alexa skill in directory alexa should be deployed to AWS lambda as a nodejs function.
+An accompanying Alexa skill must be created in Amazon's developer portal.
+Use 'Youtube TV' as the invocation name.
+The details are explained elsewhere e.g. https://developer.amazon.com/alexa-skills-kit#get-started-now .
+Please use the instructions there.
+
 ### Local Deployment
 
 You can run the web application locally:
