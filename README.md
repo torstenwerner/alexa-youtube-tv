@@ -42,6 +42,7 @@ Speak to the echo:
 - Alexa, starte das Video mit Youtube TV.
 
 Alexa will not answer but trigger the video playback in the browser.
+Repeat it if you want.
 
 ### Deployment with Docker
 
